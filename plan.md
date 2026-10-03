@@ -11,7 +11,7 @@ Build a responsive, public one-page landing experience inspired by the supplied 
 - `src/styles.css` — responsive layout, design tokens, motion-safe fallbacks, and visual states.
 - `public/assets/itz-fizz-scroll.mp4` — supplied 10-second hero video.
 - `public/assets/itz-fizz-logo.png` — project-specific favicon/brand icon.
-- `public/manus-routes.json` — route manifest for `/`.
+- `public/d-routes.json` — route manifest for `/`.
 - `ideas.md` — accepted design direction.
 
 ## Interaction logic
@@ -24,11 +24,11 @@ Build a responsive, public one-page landing experience inspired by the supplied 
 
 ## Delivery architecture
 
-Use static frontend delivery because the page has no private data, server actions, or dynamic APIs. The build command is `pnpm install --frozen-lockfile && pnpm build`; output is `dist` containing `index.html`, JS/CSS, media, and the logo. Public versioned assets are cacheable for a long lifetime; the stable HTML is left revalidatable by the platform. The current route set is `/`, with `/manus-routes.json` as a system manifest asset.
+Use static frontend delivery because the page has no private data, server actions, or dynamic APIs. The build command is `pnpm install --frozen-lockfile && pnpm build`; output is `dist` containing `index.html`, JS/CSS, media, and the logo. Public versioned assets are cacheable for a long lifetime; the stable HTML is left revalidatable by the platform. The current route set is `/`, with `/d-routes.json` as a system manifest asset.
 
 ## Verification
 
 - Run the project's build and `node --check` on the authored JavaScript.
-- Start the configured preview server and verify `/`, `/manus-routes.json`, and the video asset return successfully.
+- Start the configured preview server and verify `/`, `/d-routes.json`, and the video asset return successfully.
 - Review the implementation for semantic structure, responsive CSS, reduced-motion behavior, scroll interpolation, and no per-scroll layout/reflow work.
 - Save a canonical checkpoint before publication, then publish the latest checkpoint and report only the confirmed live URL.
